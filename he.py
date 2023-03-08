@@ -94,9 +94,9 @@
 def perkalian(bebas, tod):
     hasil=0
     print(f'{bebas}x{tod}= ', end="")
-    for i in range(bebas,bebas+1):
+    for i in range(1,bebas+1):
         if i == bebas:
-            print(f'{bebas} = ', end="")
+            print(f'{tod} = ', end="")
         else:
             print(f'{tod} + ', end="")
         hasil=hasil+tod
@@ -104,6 +104,24 @@ def perkalian(bebas, tod):
 
 print(perkalian(6,5))
 
+
+bawah=int(input("Masukkan = "))
+atas=int(input("Masukkan = "))
+
+if bawah>atas:
+    for i in range(bawah,atas-1,-1):
+        if i%2==1:
+            if i == atas or i == atas+1:
+                print(i)
+            else:
+                print(i, end=", ")
+else:
+    for i in range(bawah,atas+1):
+        if i%2==1:
+            if i == atas or i == atas-1:
+                print(i)
+            else:
+                print(i, end=", ")
 
 
 
