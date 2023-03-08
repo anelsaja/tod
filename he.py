@@ -123,6 +123,23 @@ else:
             else:
                 print(i, end=", ")
 
+matkul=int(input("masukkan= "))
+listmatkul=[]
+jumlahnilai=0
+for i in range(matkul):
+    nilai=(input(f'masukkan matkul {i+1} : '))
+    listmatkul.append(nilai)
+for i in range(matkul):    
+    if listmatkul[i]=='A':
+        jumlahnilai=jumlahnilai+4
+    if listmatkul[i]=='B':
+        jumlahnilai=jumlahnilai+3
+    if listmatkul[i]=='C':
+        jumlahnilai=jumlahnilai+2
+    if listmatkul[i]=='D':
+        jumlahnilai=jumlahnilai+1
+
+print(f'ipsnya adalah= {(((jumlahnilai*3)/matkul)/3)}')
 
 
 
