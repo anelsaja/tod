@@ -1,0 +1,53 @@
+# keyword=input('Masukkan = ')
+# keyword= keyword.lower()
+namafile= 'hee.txt'
+
+handle= open(namafile,'r+')
+# mode r,w,a,b-gambar binari
+# namafil= 'D:\\New folder (3)\hee.txt'
+# n=int(input('masukkan = '))
+# nobaris=1
+# for baris in handle:
+#     if nobaris == n:
+#         print(baris,  end='')
+#     nobaris = nobaris +1
+
+# handle.close()
+# 1. read()= string 
+# 2. readline()= string 1 baris di posisi sekarang
+# 3. readlines()= list
+
+# print("Ukuran: ", len(handle.readlines()), "bytes")
+
+# count = 1
+# for line in handle:
+#     if line.startswith("baris") and count <= 10:
+#         count += 1
+#         print(line, end='')
+
+# jumlha=0
+# for baris in handle:
+#     baris = baris.lower()
+#     jumlha=jumlha+baris.count(keyword)
+# print("Ukuran: ", jumlha, "bytes" , keyword)
+
+# isifile=input('masukkan = ')
+# handle.write(isifile)
+# handle.close()
+
+
+isifile=handle.read()
+isifile=isifile.lower()
+handle.close()
+
+reples = input('masukkan yang ingin diubah = ')
+reples = reples.lower()
+if isifile.count(reples)
+baru = input('masukkan kata baru = ')
+baru= baru.lower()
+handle = open(namafile,'w')
+rep=reples.replace(reples, baru)
+
+handle.write(rep)
+handle.close()
+
