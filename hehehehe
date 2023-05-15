@@ -1,0 +1,103 @@
+hehe = [1, 2, 3, 4, 5]
+
+haha = (1, 2, 3, 4, 5)
+
+hihi = (2,)
+
+hoho = ([5,6],7)
+hehe.append(8)
+
+print(hehe)
+print(haha)
+print(hoho)
+print(hehe[4])
+print(haha[3:])
+print(hihi)
+
+print(tuple(hehe))
+print(list(hehe))
+
+t = tuple('dutawacana')
+print(t)
+
+print((1,2,3)>(1,2,5))
+print((1,2,3)<(1,2,5))
+print((1,2)>(1,2,5))
+print((1,2,3)>(1,2))
+print((1,2)<(1,2,5))
+
+kalimat = 'but soft what light in yonder window breaks'
+dafkata = kalimat.split()
+t = list()
+for kata in dafkata:
+    t.append((len(kata), kata))
+t.sort(reverse=True)
+urutan = list()
+for length, kata in t:
+        urutan.append(kata)
+print(urutan)
+
+data = [(100, 'bob', 1.3),
+        (98, 'her', 5.8),
+        (102, 'don', 6.5)
+]
+data.sort(reverse=True) #default ascending, pakai key index ke=0
+print(f"ada {len(data)} orang")
+print(f"ada {data[2]} orang")
+
+data.sort(key=lambda x: x[1]) ##default ascending, pakai key index ke=1
+print(f"ada {data} orang")
+
+data.sort(key=lambda x: x[2], reverse=True) ##default descending, pakai key index ke=2
+print(f"ada {data} orang")
+
+
+print(f"{data[2][2]}")
+
+data.append((99, 'Joni', 4.0))
+data.sort(key=lambda x: x[2]) ##default ascending, pakai key index ke=2
+print(f"ada {data} orang")
+
+del data[0]
+data.append((99, 'Jono', 3.0))
+data.sort(key=lambda x: x[2]) ##default ascending, pakai key index ke=2
+print(f"ada {data} orang")
+
+doto = {
+      'nama': 'Sumber',
+      'no. nota': 1,
+      'kepada': "heru",
+      'barang': [
+            (1, 'polpen', 1000, 3, 3000),
+            (2, 'dom', 1000,5,5000),
+      ]
+}
+
+for key, value in doto.items():
+      print(f"{key}: {value}")
+
+
+
+def trenilaiterbaik(daftarnilai):
+      daftarnilai.sort(reverse=True)
+      hasil = tuple(daftarnilai[:3])
+      return hasil
+
+s=0
+while s < 3:
+    s = int(input("masukkan angka min. 3 = "))
+
+deta = []
+for i in range(s):
+      nilai = int(input("Masukkan nilai = "))
+      deta.append(nilai)
+
+hasil = trenilaiterbaik(deta)
+
+print(f"1. {hasil[0]}\n2. {hasil[1]}\n3. {hasil[2]}")
+print(max(hasil))
+
+
+
+
+
